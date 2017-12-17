@@ -185,18 +185,20 @@ function match(element) {
 
     checkWin();
 
-    element.classList.remove("open", "show");
-    overlay.removeClass("overlay");
-
+    setTimeout(function() {
+        element.classList.remove("open", "show");
+        overlay.removeClass("overlay");
+    }, 500);
 }
 
 // Handle cards that don't match
 function mismatch(element) {
     element.classList.add("mismatch");
 
-    element.classList.remove("mismatch", "open", "show");
-    overlay.removeClass("overlay");
-
+    setTimeout(function() {
+        element.classList.remove("mismatch", "open", "show");
+        overlay.removeClass("overlay");
+    }, 500);
 }
 
 // Checks if the game is won
